@@ -1,0 +1,13 @@
+{
+  "projectConfig": {
+    "projectName": "airdocndoc",
+    "frontend": "react",
+    "databaseOption": "sqlite",
+    "withStorybook": true,
+    "installPrettier": true,
+    "initializeGit": true,
+    "deploymentOption": "Vercel",
+    "verboseLogs": false,
+    "dirtCLIVersion": "n/a"
+  }
+}

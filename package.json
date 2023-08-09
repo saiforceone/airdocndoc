@@ -1,0 +1,55 @@
+{
+  "name": "airdocndoc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "vite-build": "vite build",
+    "vite-dev": "vite",
+    "tailwind": "tailwindcss -i ./static/css/main.css -o ./static/dist/css/app.css",
+    "tailwind-dev": "tailwindcss -i ./static/css/main.css -o ./static/dist/css/app.css --watch",
+    "dirt-fe": "concurrently -c \"auto\" --names \"tailwind-css,dirt-frontend\" \"npm run tailwind-dev\" \"npm run vite-dev\"",
+    "dirt-dev": "concurrently -c \"auto\" --names \"dirt-dev-server,tailwind-css,dirt-frontend\" \"PYTHONUNBUFFERED=1 exec ./manage.py runserver --settings=dirt_settings.dev\" \"npm run tailwind-dev\" \"npm run vite-dev\"",
+    "build-assets": "node dirt-build-assets.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prestorybook": "tailwindcss -i ./static/css/main.css -o ./static/dist/css/app.css",
+    "storybook": "storybook dev -p 6006 --disable-telemetry",
+    "storybook-build": "storybook build"
+  },
+  "keywords": [
+    "django",
+    "dirt-cli",
+    "dirt-stack"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@headlessui/react": "^1.7.9",
+    "@inertiajs/react": "^1.0.0",
+    "@storybook/addon-essentials": "^7.2.1",
+    "@storybook/addon-interactions": "^7.2.1",
+    "@storybook/addon-links": "^7.2.1",
+    "@storybook/blocks": "^7.2.1",
+    "@storybook/react": "^7.2.1",
+    "@storybook/react-vite": "^7.2.1",
+    "@storybook/testing-library": "^0.0.14-next.2",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@vitejs/plugin-react": "^3.1.0",
+    "autoprefixer": "^10.4.13",
+    "concurrently": "^7.6.0",
+    "postcss": "^8.4.21",
+    "prettier": "^2.8.8",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^7.2.1",
+    "tailwindcss": "^3.2.4",
+    "ts-loader": "^9.4.2",
+    "typescript": "^4.9.5",
+    "vite": "^4.1.1",
+    "vite-tsconfig-paths": "^4.0.5"
+  },
+  "dependencies": {
+    "react-icons": "^4.7.1"
+  }
+}
