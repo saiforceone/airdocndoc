@@ -48,7 +48,7 @@ class HealthFacility(models.Model):
     name = models.CharField(max_length=150)
     street_address = models.CharField(max_length=200)
     region_or_state = models.CharField(max_length=100)
-    phone_number = models.CharField(max_lenght=20)
+    phone_number = models.CharField(max_length=20)
     email_address = models.EmailField()
     opening_hour = models.ForeignKey("HealthFacilityOpenHour", on_delete=models.SET_NULL, blank=True, null=True)
 
