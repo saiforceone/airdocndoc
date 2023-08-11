@@ -290,3 +290,5 @@ cython_debug/
 
 dirt_settings/dev.py
 dirt_settings/production.py
+
+.idea

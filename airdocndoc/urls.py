@@ -15,7 +15,7 @@ Including another URLconf
 """
 # Uncomment the import for admin if you need the django admin web interface
 # from django.contrib import admin
-from django.urls import path, re_path
+from django.urls import path, re_path, include
 from django.contrib.staticfiles.views import serve as serve_static
 
 from . import views
@@ -31,6 +31,7 @@ def temp_dirt_static_server(request, path, **kwargs):
 
 urlpatterns = [
     path('', views.index, name='home'),
+    path('airdoccore/', include('airdoccore.urls'), name='airdoccore'),
     # Uncomment below if you need the admin interface
     # path("admin/", admin.site.urls),
     # Remove the static url below path if you are using something like Apache or Nginx
